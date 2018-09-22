@@ -1,0 +1,24 @@
+{
+  "name": "extra-object",
+  "version": "0.0.1",
+  "description": "Extra methods for object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/extra-object.git"
+  },
+  "keywords": [
+    "extra",
+    "object",
+    "merferry"
+  ],
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/extra-object/issues"
+  },
+  "homepage": "https://github.com/nodef/extra-object#readme"
+}
