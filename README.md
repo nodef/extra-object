@@ -1,21 +1,33 @@
-# object-extra
-Extra methods for object.
+Standard utility methods for [Object].<br>
+Browserified, minified module: [extra-object.min].
 
-// 1. Search methods
-Object.keyOf = require('./key-of');
-Object.keysOf = require('./keys-of');
-Object.containsKeys = require('./contains-keys');
-Object.includes = require('./includes');
+```javascript
+const Object = require('extra-obejct');
+// Object.keyOf(<object>, <search value>)
+// Object.keysOf(<object>, <search value>, [target=[]], [at])
+// ...
+```
 
-// 2. Generate methods
-Object.from = require('./from');
-Object.fromLists = require('./from-lists');
+Search methods:
+- [keyOf](https://www.npmjs.com/package/@extra-object/key-of)
+- [keysOf](https://www.npmjs.com/package/@extra-object/keys-of)
+- [containsKeys](https://www.npmjs.com/package/@extra-object/contains-keys)
+- [includes](https://www.npmjs.com/package/@extra-object/includes)
 
-// 3. Transform methods
-Object.without = require('./without');
+Generate methods:
+- [from](https://www.npmjs.com/package/@extra-object/from)
+- [fromLists](https://www.npmjs.com/package/@extra-object/from-lists)
 
-// 4. Functional methods
-Object.every = require('./every');
-Object.find = require('./find');
-Object.findKey = require('./find-key');
-module.exports = Object;
+Transform methods:
+- [without](https://www.npmjs.com/package/@extra-object/without)
+
+Functional methods:
+- [every](https://www.npmjs.com/package/@extra-object/every)
+- [find](https://www.npmjs.com/package/@extra-object/find)
+- [findKey](https://www.npmjs.com/package/@extra-object/find-key)
+
+
+[![nodef](https://i.imgur.com/yFUJ4GM.jpg)](https://nodef.github.io)
+
+[Object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+[extra-object.min]: https://www.npmjs.com/package/extra-object.min
