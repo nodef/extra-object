@@ -1,6 +1,3 @@
-# object-extra
-Extra methods for object.
-
 // 1. Search methods
 Object.keyOf = require('./key-of');
 Object.keysOf = require('./keys-of');
