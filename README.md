@@ -17,6 +17,7 @@ Search methods:
 Generate methods:
 - [from](https://www.npmjs.com/package/@extra-object/from)
 - [fromLists](https://www.npmjs.com/package/@extra-object/from-lists)
+- [fromEntries](https://www.npmjs.com/package/@extra-object/from-entries)
 
 Transform methods:
 - [without](https://www.npmjs.com/package/@extra-object/without)

@@ -7,6 +7,7 @@ Object.includes = require('./includes');
 // 2. Generate methods
 Object.from = require('./from');
 Object.fromLists = require('./from-lists');
+Object.fromEntries = require('./from-entries');
 
 // 3. Transform methods
 Object.without = require('./without');
