@@ -1,37 +1,37 @@
-function keyOf(obj, val) {
-  for(var k in obj) {
-    if(!obj.hasOwnProperty(k)) continue;
-    if(obj[k]===val) return k;
+function keyOf(object, value) {
+  for(var k in object) {
+    if(!object.hasOwnProperty(k)) continue;
+    if(object[k]===value) return k;
   }
 }
-function keysOf(obj, val, z=[], z0=z.length) {
-  for(var k in obj) {
-    if(!obj.hasOwnProperty(k)) continue;
-    if(obj[k]===val) z[z0++] = k;
+function keysOf(object, value, target=[], offset=target.length) {
+  for(var k in object) {
+    if(!object.hasOwnProperty(k)) continue;
+    if(object[k]===value) target[offset++] = k;
   }
-  return z;
+  return target;
 }
-function containsKeys(obj, itr) {
-  for(var k of itr)
-    if(!(k in obj)) return false;
+function containsKeys(object, iterable) {
+  for(var k of iterable)
+    if(!(k in object)) return false;
   return true;
 }
-function includes(obj, val) {
-  for(var k in obj) {
-    if(!obj.hasOwnProperty(k)) continue;
-    if(obj[k]===val) return true;
+function includes(object, value) {
+  for(var k in object) {
+    if(!object.hasOwnProperty(k)) continue;
+    if(object[k]===value) return true;
   }
   return false;
 }
-function from(itr) {
+function from(iterable) {
   var z = {};
-  for(var [k, v] of itr)
+  for(var [k, v] of iterable)
     z[k] = v;
   return z;
 }
-function fromLists(lst) {
-  var vi = lst[1][Symbol.iterator](), z = {};
-  for(var k of lst[0])
+function fromLists(lists) {
+  var vi = lists[1][Symbol.iterator](), z = {};
+  for(var k of lists[0])
     z[k] = vi.next().value;
   return z;
 }
@@ -42,48 +42,48 @@ function fromEntries(entries) {
   return object;
 }
 const exports6 = Object.fromEntries||fromEntries;
-function value(obj, val) {
+function value(object, value) {
   var z = {};
-  for(var k in obj)
-    if(k!==val) z[k] = obj[k];
+  for(var k in object)
+    if(k!==value) z[k] = object[k];
   return z;
 }
-function array(obj, val) {
+function array(object, value) {
   var z = {};
-  for(var k in obj)
-    if(!val.includes(k)) z[k] = obj[k];
+  for(var k in object)
+    if(!value.includes(k)) z[k] = object[k];
   return z;
 }
-function set(obj, val) {
+function set(object, value) {
   var z = {};
-  for(var k in obj)
-    if(!val.has(k)) z[k] = obj[k];
+  for(var k in object)
+    if(!value.has(k)) z[k] = object[k];
   return z;
 }
-function without(obj, val) {
-  if(obj==null) return obj;
-  if(val instanceof Set) return set(obj, val);
-  if(Array.isArray(val)) return array(obj, val);
-  return value(obj, val);
+function without(object, value) {
+  if(object==null) return object;
+  if(value instanceof Set) return set(object, value);
+  if(Array.isArray(value)) return array(object, value);
+  return value(object, value);
 }
 without.value = value;
 without.array = array;
 without.set = set;
-function every(obj, fn, ths) {
-  var K = Object.keys(obj);
+function every(object, callback, self) {
+  var K = Object.keys(object);
   for(var i=0, I=K.length; i<I; i++)
-    if(!fn.call(ths, obj[K[i]], K[i], obj)) return false;
+    if(!callback.call(self, object[K[i]], K[i], object)) return false;
   return true;
 }
-function find(obj, fn, ths) {
-  var K = Object.keys(obj);
+function find(object, callback, self) {
+  var K = Object.keys(object);
   for(var i=0, I=K.length; i<I; i++)
-    if(fn.call(ths, obj[K[i]], K[i], obj)) return obj[K[i]];
+    if(callback.call(self, object[K[i]], K[i], object)) return object[K[i]];
 }
-function findIndex(obj, fn, ths) {
-  var K = Object.keys(obj);
+function findIndex(object, callback, self) {
+  var K = Object.keys(object);
   for(var i=0, I=K.length; i<I; i++)
-    if(fn.call(ths, obj[K[i]], K[i], obj)) return K[i];
+    if(callback.call(self, object[K[i]], K[i], object)) return K[i];
 }
 // 1. Search methods
 Object.keyOf = keyOf;

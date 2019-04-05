@@ -15,4 +15,4 @@ fromLists([['w1', 'w2', 'w3'], a]);
 [![extra-object](https://i.imgur.com/yFUJ4GM.jpg)](https://www.npmjs.com/package/extra-object)
 
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
-[lists]: https://www.npmjs.com/package/lists-is
+[lists]: https://www.npmjs.com/package/@extra-lists/is
