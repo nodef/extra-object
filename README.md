@@ -24,6 +24,7 @@ Transform methods:
 
 Functional methods:
 - [every](https://www.npmjs.com/package/@extra-object/every)
+- [filter](https://www.npmjs.com/package/@extra-object/filter)
 - [find](https://www.npmjs.com/package/@extra-object/find)
 - [findKey](https://www.npmjs.com/package/@extra-object/find-key)
 

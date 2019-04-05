@@ -14,6 +14,7 @@ Object.without = require('./without');
 
 // 4. Functional methods
 Object.every = require('./every');
+Object.filter = require('./filter');
 Object.find = require('./find');
 Object.findKey = require('./find-key');
 module.exports = Object;

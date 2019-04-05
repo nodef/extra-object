@@ -23,4 +23,4 @@ filter(object, callback, self);
 [![extra-object](https://i.imgur.com/yFUJ4GM.jpg)](https://www.npmjs.com/package/extra-object)
 
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
-[Array.every()]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+[Array.filter()]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
