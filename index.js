@@ -75,6 +75,12 @@ function every(object, callback, self) {
     if(!callback.call(self, object[K[i]], K[i], object)) return false;
   return true;
 }
+function filter(object, callback, self) {
+  var out = {};
+  for(var k in object)
+    if(callback.call(self, object[k], k, object)) out[k] = object[k];
+  return out;
+}
 function find(object, callback, self) {
   var K = Object.keys(object);
   for(var i=0, I=K.length; i<I; i++)
@@ -101,6 +107,7 @@ Object.without = without;
 
 // 4. Functional methods
 Object.every = every;
+Object.filter = filter;
 Object.find = find;
 Object.findKey = findIndex;
 module.exports = Object;
