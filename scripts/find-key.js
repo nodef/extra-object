@@ -1,6 +1,6 @@
-function findIndex(obj, fn, ths) {
-  var K = Object.keys(obj);
+function findIndex(object, callback, self) {
+  var K = Object.keys(object);
   for(var i=0, I=K.length; i<I; i++)
-    if(fn.call(ths, obj[K[i]], K[i], obj)) return K[i];
+    if(callback.call(self, object[K[i]], K[i], object)) return K[i];
 };
 module.exports = findIndex;

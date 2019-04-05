@@ -1,7 +1,7 @@
-function includes(obj, val) {
-  for(var k in obj) {
-    if(!obj.hasOwnProperty(k)) continue;
-    if(obj[k]===val) return true;
+function includes(object, value) {
+  for(var k in object) {
+    if(!object.hasOwnProperty(k)) continue;
+    if(object[k]===value) return true;
   }
   return false;
 };

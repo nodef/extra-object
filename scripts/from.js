@@ -1,6 +1,6 @@
-function from(itr) {
+function from(iterable) {
   var z = {};
-  for(var [k, v] of itr)
+  for(var [k, v] of iterable)
     z[k] = v;
   return z;
 };

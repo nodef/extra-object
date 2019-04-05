@@ -35,6 +35,13 @@ function fromLists(lst) {
     z[k] = vi.next().value;
   return z;
 }
+function fromEntries(entries) {
+  var object = {};
+  for(var e of entries)
+    object[e[0]] = e[1];
+  return object;
+}
+const exports6 = Object.fromEntries||fromEntries;
 function value(obj, val) {
   var z = {};
   for(var k in obj)
@@ -87,6 +94,7 @@ Object.includes = includes;
 // 2. Generate methods
 Object.from = from;
 Object.fromLists = fromLists;
+Object.fromEntries = exports6;
 
 // 3. Transform methods
 Object.without = without;

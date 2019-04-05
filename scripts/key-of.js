@@ -1,7 +1,7 @@
-function keyOf(obj, val) {
-  for(var k in obj) {
-    if(!obj.hasOwnProperty(k)) continue;
-    if(obj[k]===val) return k;
+function keyOf(object, value) {
+  for(var k in object) {
+    if(!object.hasOwnProperty(k)) continue;
+    if(object[k]===value) return k;
   }
 };
 module.exports = keyOf;

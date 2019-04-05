@@ -1,26 +1,26 @@
-function value(obj, val) {
+function value(object, value) {
   var z = {};
-  for(var k in obj)
-    if(k!==val) z[k] = obj[k];
+  for(var k in object)
+    if(k!==value) z[k] = object[k];
   return z;
 };
-function array(obj, val) {
+function array(object, value) {
   var z = {};
-  for(var k in obj)
-    if(!val.includes(k)) z[k] = obj[k];
+  for(var k in object)
+    if(!value.includes(k)) z[k] = object[k];
   return z;
 };
-function set(obj, val) {
+function set(object, value) {
   var z = {};
-  for(var k in obj)
-    if(!val.has(k)) z[k] = obj[k];
+  for(var k in object)
+    if(!value.has(k)) z[k] = object[k];
   return z;
 };
-function without(obj, val) {
-  if(obj==null) return obj;
-  if(val instanceof Set) return set(obj, val);
-  if(Array.isArray(val)) return array(obj, val);
-  return value(obj, val);
+function without(object, value) {
+  if(object==null) return object;
+  if(value instanceof Set) return set(object, value);
+  if(Array.isArray(value)) return array(object, value);
+  return value(object, value);
 };
 without.value = value;
 without.array = array;
