@@ -1,12 +1,9 @@
 {
   "name": "extra-object",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Standard utility methods for Object.",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "node ./prepublish",
-    "browserify": "browserify index.js -o index.web.js",
-    "uglifyjs": "uglifyjs -c -m -o index.min.js index.web.js",
     "test": "exit"
   },
   "keywords": [
