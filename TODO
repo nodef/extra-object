@@ -1,0 +1,4 @@
+- object.from(keys, values, deep=false) // object.zip(deep)
+- object.fromentries
+- object.zip
+- object.zip(deep)
