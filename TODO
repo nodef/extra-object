@@ -3,3 +3,11 @@
 - object.zip
 - object.zip(deep)
 https://www.npmjs.com/package/object-path
+
+
+nested-object-assign	object	Package to support nested merging of objects & properties, using Object.Assign
+flat-properties	object	Flat properties from hierarchy object data.
+eagle-validator	object	A  modern javascript object validation NPM package available on npmjs.com
+pluckey	object	A tiny util library to pluck key from deep arrays and objects
+deepdown	object	Safely drill into your JavaScript objects with dynamically defined paths
+get-nested-object	object	Find and return a nested object or array included in parent arrays or objects
