@@ -10,3 +10,4 @@ function shift$(x: object): object {
   }
   return x;
 }
+export default shift$;
