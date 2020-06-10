@@ -1,3 +1,5 @@
+searchValue, Ket, Entry
+
 - object.from(keys, values, deep=false) // object.zip(deep)
 - object.fromentries
 - object.zip
