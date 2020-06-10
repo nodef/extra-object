@@ -6,7 +6,7 @@ function isKeyNone(x: object, k: string): boolean {
   return x.hasOwnProperty(k);
 }
 
-function isKeyDual(x: object, k: string, fc: compareFn, fm: mapFn) {
+function isKeyDual(x: object, k: string, fc: compareFn, fm: mapFn): boolean {
   var fc = fc||cmp, fm = fm||id;
   var k1 = fm(k, k, null);
   for(var j of Object.keys(x)) {
@@ -23,7 +23,7 @@ function isKeyDual(x: object, k: string, fc: compareFn, fm: mapFn) {
  * @param fc compare function (a, b)
  * @param fm map function (k, k, x)
  */
-function isKey(x: object, k: string, fc: compareFn=null, fm: mapFn=null) {
+function isKey(x: object, k: string, fc: compareFn=null, fm: mapFn=null): boolean {
   if(fc || fm) return isKeyDual(x, k, fc, fm);
   else return isKeyNone(x, k);
 }
