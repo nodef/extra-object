@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "An object is a collection of properties, with associated values.",
   "main": "index.js",
   "module": "index.mjs",
@@ -18,13 +18,7 @@
   "runkitExampleFilename": "example.js",
   "keywords": [
     "extra",
-    "object",
-    "standard",
-    "utility",
-    "method",
-    "manipulation",
-    "function",
-    "merferry"
+    "object"
   ],
   "repository": {
     "type": "git",
