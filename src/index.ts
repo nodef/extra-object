@@ -1,3 +1,4 @@
+export {default as chunk} from './chunk';
 export {default as concat$} from './concat$';
 export {default as concat} from './concat';
 export {default as count} from './count';
@@ -9,8 +10,11 @@ export {default as entries} from './entries';
 export {default as entry} from './entry';
 export {default as filter$} from './filter$';
 export {default as filter} from './filter';
+export {default as filterAt} from './filterAt';
 export {default as find} from './find';
 export {default as findAll} from './findAll';
+export {default as flat} from './flat';
+export {default as flatMap} from './flatMap';
 export {default as get} from './get';
 export {default as head} from './head';
 export {default as intersection} from './intersection';
