@@ -1,11 +1,21 @@
 {
   "name": "extra-object",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "An object is a collection of properties, with associated values.",
   "main": "index.js",
+  "module": "index.mjs",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
+  },
   "scripts": {
+    "einit": "ebuild init",
+    "ecode": "ebuild update --docs false",
+    "eupdate": "ebuild update",
+    "escatter": "ebuild scatter",
     "test": "exit"
   },
+  "runkitExampleFilename": "example.js",
   "keywords": [
     "extra",
     "object",
