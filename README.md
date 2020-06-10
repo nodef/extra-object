@@ -1,5 +1,5 @@
-Standard utility methods for [Object].<br>
-Browserified, minified module: [extra-object.min].
+An [object] is a collection of properties, with associated values.
+
 
 ```javascript
 const Object = require('extra-obejct');
@@ -31,5 +31,4 @@ Functional methods:
 
 [![nodef](https://i.imgur.com/yFUJ4GM.jpg)](https://nodef.github.io)
 
-[Object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-[extra-object.min]: https://www.npmjs.com/package/extra-object.min
+[object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
