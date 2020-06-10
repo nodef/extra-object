@@ -3,7 +3,7 @@
  * @param v a value
  * @returns v
  */
-function id<T>(v: T): T {
+function id(v: any): any {
   return v;
 }
 export default id;

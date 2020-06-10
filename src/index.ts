@@ -1,20 +1,53 @@
-// 1. Search methods
-Object.keyOf = require('./key-of');
-Object.keysOf = require('./keys-of');
-Object.containsKeys = require('./contains-keys');
-Object.includes = require('./includes');
-
-// 2. Generate methods
-Object.from = require('./from');
-Object.fromLists = require('./from-lists');
-Object.fromEntries = require('./from-entries');
-
-// 3. Transform methods
-Object.without = require('./without');
-
-// 4. Functional methods
-Object.every = require('./every');
-Object.filter = require('./filter');
-Object.find = require('./find');
-Object.findKey = require('./find-key');
-module.exports = Object;
+export {default as concat$} from './concat$';
+export {default as concat} from './concat';
+export {default as count} from './count';
+export {default as countAs} from './countAs';
+export {default as difference} from './difference';
+export {default as drop$} from './drop$';
+export {default as drop} from './drop';
+export {default as entries} from './entries';
+export {default as entry} from './entry';
+export {default as filter$} from './filter$';
+export {default as filter} from './filter';
+export {default as find} from './find';
+export {default as findAll} from './findAll';
+export {default as get} from './get';
+export {default as head} from './head';
+export {default as intersection} from './intersection';
+export {default as is} from './is';
+export {default as isEmpty} from './isEmpty';
+export {default as isEqual} from './isEqual';
+export {default as isKey} from './isKey';
+export {default as isValue} from './isValue';
+export {default as key} from './key';
+export {default as keys} from './keys';
+export {default as length} from './length';
+export {default as partitionAs} from './partitionAs';
+export {default as partiton} from './partiton';
+export {default as reduce} from './reduce';
+export {default as reject$} from './reject$';
+export {default as reject} from './reject';
+export {default as remove$} from './remove$';
+export {default as remove} from './remove';
+export {default as search} from './search';
+export {default as searchAll} from './searchAll';
+export {default as searchKey} from './searchKey';
+export {default as searchKeyAll} from './searchKeyAll';
+export {default as searchValue} from './searchValue';
+export {default as searchValueAll} from './searchValueAll';
+export {default as set$} from './set$';
+export {default as set} from './set';
+export {default as shift$} from './shift$';
+export {default as shift} from './shift';
+export {default as size} from './size';
+export {default as subobjects} from './subobjects';
+export {default as swap$} from './swap$';
+export {default as swap} from './swap';
+export {default as tail} from './tail';
+export {default as take$} from './take$';
+export {default as take} from './take';
+export {default as union$} from './union$';
+export {default as union} from './union';
+export {default as value} from './value';
+export {default as values} from './values';
+export {default as zip} from './zip';
