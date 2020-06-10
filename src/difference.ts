@@ -2,7 +2,7 @@ import id from './_id';
 import cmp from './_cmp';
 import type {compareFn, mapFn} from './_types';
 
-function intersection(x: object, y: object, fc: compareFn=null, fm: mapFn=null): object {
+function difference(x: object, y: object, fc: compareFn=null, fm: mapFn=null): object {
   var fc = fc||cmp, fm = fm||id;
   var a = {};
   x: for(var j in x) {
@@ -11,9 +11,10 @@ function intersection(x: object, y: object, fc: compareFn=null, fm: mapFn=null):
     for(var k in y) {
       if(!y.hasOwnProperty(k)) continue;
       var v1 = fm(y[k], k, y);
-      if(fc(u1, v1)===0) { a[j] = x[j]; continue x; }
+      if(fc(u1, v1)===0) continue x;
     }
+    a[j] = x[j];
   }
   return a;
 }
-export default intersection;
+export default difference;
