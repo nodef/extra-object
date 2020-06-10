@@ -11,4 +11,4 @@ function searchKeyAll(x: object, k: string, fc: compareFn=null, fm: mapFn=null):
     if(fc(j1, k1)===0) return j;
   }
 }
-export default searchKey;
+export default searchKeyAll;
