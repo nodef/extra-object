@@ -48,36 +48,36 @@ var x = {a: 1, b: 2, c: 3};
 
 | Method                | Action
 |-----------------------|-------
-| [is]                  | Checks if value is array.
+| [is]                  | Checks if value is object.
 | [swap]                | Exchanges two values.
-| [size]                | Gets size of part of array.
+| [size]                | Gets size of object.
 |                       | 
-| [concat]              | Appends arrays together.
-| [flat]                | Flattens nested array to given depth.
-| [chunk]               | Breaks array into chunks of given size.
+| [concat]              | Combines entries from objects, preferring last.
+| [flat]                | Flattens nested object to given depth.
+| [chunk]               | Breaks object into chunks of given size.
 |                       | 
-| [min]                 | Finds smallest value.
-| [max]                 | Finds largest value.
-| [range]               | Finds smallest and largest values.
-| [filter]              | Keeps values which pass a test.
+| [min]                 | Finds smallest entry.
+| [max]                 | Finds largest entry.
+| [range]               | Finds smallest and largest entries.
+| [filter]              | Keeps entries which pass a test.
 | [count]               | Counts values which satisfy a test.
 | [partition]           | Segregates values by test result.
-| [zip]                 | Combines values from arrays.
+| [zip]                 | Combines entries from objects.
 |                       | 
-| [union]               | Gives values present in any array.
-| [intersection]        | Gives values present in both arrays.
-| [difference]          | Gives values of array not present in another.
-| [symmetricDifference] | Gives values of array not present in another.
-| [isDisjoint]          | Checks if arrays have no value in common.
+| [union]               | Gives entries present in any object.
+| [intersection]        | Gives entries present in both objects.
+| [difference]          | Gives entries of object not present in another.
+| [symmetricDifference] | Gives entries not present in both objects.
+| [isDisjoint]          | Checks if objects have no common keys.
 |                       | 
-| [key]                 | Picks an arbitrary value.
+| [key]                 | Picks an arbitrary key.
 | [value]               | Picks an arbitrary value.
-| [entry]               | Picks an arbitrary prefix.
-| [subobject]           | Picks an arbitrary subsequence.
+| [entry]               | Picks an arbitrary entry.
+| [subobject]           | Picks an arbitrary subobject.
 |                       | 
-| [isEqual]             | Checks if two arrays are equal.
-| [compare]             | Compares two arrays.
-| [search]              | Searches a value from left.
+| [isEqual]             | Checks if two objects are equal.
+| [compare]             | Compares two objects.
+| [search]              | Finds key of an entry passing a test.
 | [find]                | Finds first value passing a test.
 
 <br>
@@ -88,3 +88,34 @@ var x = {a: 1, b: 2, c: 3};
 [browserify]: https://www.npmjs.com/package/browserify
 [rollup]: https://www.npmjs.com/package/rollup
 [uglify-js]: https://www.npmjs.com/package/uglify-js
+[is]: https://github.com/nodef/extra-object/wiki/is
+[swap]: https://github.com/nodef/extra-object/wiki/swap
+[size]: https://github.com/nodef/extra-object/wiki/size
+[concat]: https://github.com/nodef/extra-object/wiki/concat
+[flat]: https://github.com/nodef/extra-object/wiki/flat
+[chunk]: https://github.com/nodef/extra-object/wiki/chunk
+[min]: https://github.com/nodef/extra-object/wiki/min
+[max]: https://github.com/nodef/extra-object/wiki/max
+[range]: https://github.com/nodef/extra-object/wiki/range
+[filter]: https://github.com/nodef/extra-object/wiki/filter
+[count]: https://github.com/nodef/extra-object/wiki/count
+[partition]: https://github.com/nodef/extra-object/wiki/partition
+[zip]: https://github.com/nodef/extra-object/wiki/zip
+[union]: https://github.com/nodef/extra-object/wiki/union
+[intersection]: https://github.com/nodef/extra-object/wiki/intersection
+[difference]: https://github.com/nodef/extra-object/wiki/difference
+[symmetricDifference]: https://github.com/nodef/extra-object/wiki/symmetricDifference
+[isDisjoint]: https://github.com/nodef/extra-object/wiki/isDisjoint
+[key]: https://github.com/nodef/extra-object/wiki/key
+[value]: https://github.com/nodef/extra-object/wiki/value
+[entry]: https://github.com/nodef/extra-object/wiki/entry
+[subobject]: https://github.com/nodef/extra-object/wiki/subobject
+[isEqual]: https://github.com/nodef/extra-object/wiki/isEqual
+[compare]: https://github.com/nodef/extra-object/wiki/compare
+[search]: https://github.com/nodef/extra-object/wiki/search
+[find]: https://github.com/nodef/extra-object/wiki/find
+[:running:]: https://npm.runkit.com/extra-object
+[:vhs:]: https://asciinema.org/a/338512
+[:package:]: https://www.npmjs.com/package/extra-object
+[:moon:]: https://www.npmjs.com/package/extra-object.min
+[:ledger:]: https://unpkg.com/extra-object/
