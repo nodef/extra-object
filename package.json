@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "2.0.125",
+  "version": "2.0.126",
   "description": "An object is a collection of properties, with associated values.",
   "main": "index.js",
   "module": "index.mjs",
@@ -56,8 +56,8 @@
     "map",
     "max",
     "min",
+    "partition",
     "partitionAs",
-    "partiton",
     "range",
     "reduce",
     "reject",
