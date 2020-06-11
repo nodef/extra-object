@@ -1,15 +1,6 @@
+import id from './_id';
 import is from './is';
 import type {mapFn} from './_types';
-
-function flatMapTo(x: object, fn: mapFn, ths: object, a: object): object {
-  for(var k in x) {
-    if(!x.hasOwnProperty(k)) continue;
-    var v = fn.call(ths, x[k], k, x);
-    if(is(v)) flatMapTo(v, fn, ths, a);
-    else a[k] = v;
-  }
-  return a;
-}
 
 /**
  * Flattens nested object, using map function.
@@ -17,7 +8,15 @@ function flatMapTo(x: object, fn: mapFn, ths: object, a: object): object {
  * @param fn map function (v, k, x)
  * @param ths this argument
  */
-function flatMap(x: object, fn: mapFn, ths: object=null): object {
-  return flatMapTo(x, fn, ths, {});
+function flatMap(x: object, fn: mapFn=null, ths: object=null): object {
+  var fn = fn||id;
+  var a = {};
+  for(var k in x) {
+    if(!x.hasOwnProperty(k)) continue;
+    var v1 = fn.call(ths, x[k], k, x);
+    if(is(v1)) Object.assign(a, v1);
+    else a[k] = v1;
+  }
+  return a;
 }
 export default flatMap;

@@ -16,7 +16,7 @@ function range(x: object, fc: compareFn=null, fm: mapFn=null): [[string, any], [
   var i = 0;
   for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
-    var u = x[k], v = fm(v, k, x);
+    var u = x[k], v = fm(u, k, x);
     if(i===0 || fc(v, mv)<0) { mk = k; mu = u; mv = v; }
     if(i===0 || fc(v, nv)>0) { nk = k; nu = u; nv = v; }
     i++;
