@@ -1,5 +1,5 @@
 /**
- * Extracts given number of entries from object.
+ * Keeps first n entries only.
  * @param x an object
  * @param n number of entries (1)
  */
