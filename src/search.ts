@@ -11,5 +11,6 @@ function search(x: object, fn: testFn, ths: object=null): string {
     if(!x.hasOwnProperty(k)) continue;
     if(fn.call(ths, x[k], k, x)) return k;
   }
+  return null;
 }
 export default search;

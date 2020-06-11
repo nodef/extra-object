@@ -17,5 +17,6 @@ function searchValue(x: object, v: any, fc: compareFn=null, fm: mapFn=null): str
     var u1 = fm(v, k, x);
     if(fc(u1, v1)===0) return k;
   }
+  return null;
 }
 export default searchValue;
