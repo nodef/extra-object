@@ -2,6 +2,13 @@ import id from './_id';
 import cmp from './_cmp';
 import type {compareFn, mapFn} from './_types';
 
+/**
+ * Finds keys with given value.
+ * @param x an object
+ * @param v search value
+ * @param fc compare function (a, b)
+ * @param fm map function (v, k, x)
+ */
 function searchValueAll(x: object, v: any, fc: compareFn=null, fm: mapFn=null): string[] {
   var fc = fc||cmp, fm = fm||id;
   var v1 = fm(v, null, x), a = [];
