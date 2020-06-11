@@ -1,5 +1,12 @@
 import type {testFn} from './_types';
 
+/**
+ * Segregates values by test result.
+ * @param x an object
+ * @param fn test function (v, k, x)
+ * @param ths this argument
+ * @returns [satisfies, doesnt]
+ */
 function partition(x: object, fn: testFn, ths: object=null): [object, object] {
   var t = {}, f = {};
   for(var k in x) {
