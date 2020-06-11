@@ -1,3 +1,9 @@
+/**
+ * Gets object without given keys.
+ * @param x an object (updated)
+ * @param ks keys
+ * @returns x
+ */
 function rejectAt$(x: object, ks: string[]): object {
   for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
