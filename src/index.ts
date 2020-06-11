@@ -50,6 +50,7 @@ export {default as remove$} from './remove$';
 export {default as remove} from './remove';
 export {default as search} from './search';
 export {default as searchAll} from './searchAll';
+export {default as searchUntil} from './searchUntil';
 export {default as searchValue} from './searchValue';
 export {default as searchValueAll} from './searchValueAll';
 export {default as set$} from './set$';

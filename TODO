@@ -1,11 +1,15 @@
-searchValue, Ket, Entry
+CONFUSING PATTERNS
+- find*
+- map
+- ths?
+- (v, k, x) | (v, k) | (e)
+
+- .get in any vs here?
 
 - object.from(keys, values, deep=false) // object.zip(deep)
 - object.fromentries
-- object.zip
 - object.zip(deep)
 https://www.npmjs.com/package/object-path
-
 
 nested-object-assign	object	Package to support nested merging of objects & properties, using Object.Assign
 flat-properties	object	Flat properties from hierarchy object data.
