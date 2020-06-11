@@ -1,6 +1,11 @@
 import id from './_id';
 import type {mapFn} from './_types';
 
+/**
+ * Lists cartesian product of objects.
+ * @param xs objects
+ * @param fn map function (v, null, null)
+ */
 function* cartesianProduct(xs: object[], fn: mapFn=null): IterableIterator<any> {
   var fn = fn||id;
   var XS  = xs.length;
