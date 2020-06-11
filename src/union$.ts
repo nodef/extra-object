@@ -1,18 +1,19 @@
 import id from './_id';
-import cmp from './_cmp';
-import type {compareFn, mapFn} from './_types';
+import type {combineFn} from './_types';
 
-function union$(x: object, y: object, fc: compareFn=null, fm: mapFn=null): object {
-  var fc = fc||cmp, fm = fm||id;
-  y: for(var k in y) {
+/**
+ * Gives entries present in any object.
+ * @param x an object (updated)
+ * @param y another object
+ * @param fn combine function (a, b)
+ * @returns x
+ */
+function union$(x: object, y: object, fn: combineFn=null): object {
+  var fn = fn||id as combineFn;
+  for(var k in y) {
     if(!y.hasOwnProperty(k)) continue;
-    var v1 = fm(y[k], k, y);
-    for(var j in x) {
-      if(!x.hasOwnProperty(j)) continue;
-      var u1 = fm(x[j], j, x);
-      if(fc(u1, v1)===0) continue y;
-    }
-    x[k] = y[k];
+    if(!x.hasOwnProperty(k)) x[k] = y[k];
+    else x[k] = fn(x[k], y[k]);
   }
   return x;
 }
