@@ -1,5 +1,10 @@
 import unionKeys from './unionKeys';
 
+/**
+ * Gives entries not present in both objects.
+ * @param x an object
+ * @param y another object
+ */
 function symmetricDifference(x: object, y: object): object {
   var ks = unionKeys(x, y), a = {};
   for(var k of ks) {
