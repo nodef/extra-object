@@ -1,19 +1,14 @@
-import id from './_id';
-import cmp from './_cmp';
-import type {compareFn, mapFn} from './_types';
-
-function difference(x: object, y: object, fc: compareFn=null, fm: mapFn=null): object {
-  var fc = fc||cmp, fm = fm||id;
+/**
+ * Gives entries of object not present in another.
+ * @param x an object
+ * @param y another object
+ */
+function difference(x: object, y: object): object {
   var a = {};
-  x: for(var j in x) {
-    if(!x.hasOwnProperty(j)) continue;
-    var u1 = fm(x[j], j, x);
-    for(var k in y) {
-      if(!y.hasOwnProperty(k)) continue;
-      var v1 = fm(y[k], k, y);
-      if(fc(u1, v1)===0) continue x;
-    }
-    a[j] = x[j];
+  for(var k in x) {
+    if(!x.hasOwnProperty(k)) continue;
+    if(y.hasOwnProperty(k)) continue;
+    a[k] = x[k];
   }
   return a;
 }
