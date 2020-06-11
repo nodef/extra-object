@@ -1,3 +1,4 @@
+import searchUntil from './searchUntil';
 import type {testFn} from './_types';
 
 /**
@@ -7,10 +8,6 @@ import type {testFn} from './_types';
  * @param ths this argument
  */
 function every(x: object, fn: testFn, ths: object=null) {
-  for(var k in x) {
-    if(!x.hasOwnProperty(k)) continue;
-    if(!fn.call(ths, x[k], k, x)) return false;
-  }
-  return true;
+  return searchUntil(x, fn, ths)==null;
 }
 export default every;
