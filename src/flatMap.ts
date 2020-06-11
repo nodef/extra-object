@@ -4,7 +4,7 @@ import type {mapFn} from './_types';
 function flatMapTo(x: object, fn: mapFn, ths: object, a: object): object {
   for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
-    var v = fn(x[k], k, x);
+    var v = fn.call(ths, x[k], k, x);
     if(is(v)) flatMapTo(v, fn, ths, a);
     else a[k] = v;
   }
