@@ -1,10 +1,10 @@
-import shift from './shift';
+import drop from './drop';
 
 /**
- * Gets object except first entry.
+ * Gets object without the first entry.
  * @param x an object
  */
 function tail(x: object): object {
-  return shift(x);
+  return drop(x, 1);
 }
 export default tail;

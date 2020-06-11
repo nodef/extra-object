@@ -1,5 +1,5 @@
 /**
- * Drops given number of entries.
+ * Removes first n entries.
  * @param x an object
  * @param n number of entries (1)
  */
