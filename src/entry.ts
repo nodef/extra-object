@@ -1,11 +1,11 @@
+import {value} from 'extra-array';
+
 /**
  * Picks an arbitrary entry.
  * @param x an object
  * @param r random seed 0->1
  */
 function entry(x: object, r: number=Math.random()): [string, any] {
-  var es = Object.entries(x), ES = es.length;
-  var i  = Math.floor(r*ES);
-  return es[i];
+  return value(Object.entries(x), r);
 }
 export default entry;
