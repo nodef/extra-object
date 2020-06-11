@@ -7,5 +7,6 @@ function head(x: object): [string, any] {
     if(!x.hasOwnProperty(k)) continue;
     return [k, x[k]];
   }
+  return [undefined, undefined];
 }
 export default head;
