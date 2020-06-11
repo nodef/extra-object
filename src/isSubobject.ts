@@ -1,9 +1,19 @@
+import id from './_id';
+import cmp from './_cmp';
 import type {compareFn, mapFn} from './_types';
 
+/**
+ * Checks if object has a subobject.
+ * @param x an object
+ * @param y subobject?
+ * @param fc compare function (a, b)
+ * @param fm map function (v, k, x)
+ */
 function isSubobject(x: object, y: object, fc: compareFn=null, fm: mapFn=null): boolean {
-  for(var k in x) {
-    if(!x.hasOwnProperty(k)) continue;
-    if(!y.hasOwnProperty(k)) return false;
+  var fc = fc||cmp, fm = fm||id;
+  for(var k in y) {
+    if(!y.hasOwnProperty(k)) continue;
+    if(!x.hasOwnProperty(k)) return false;
     var u1 = fm(x[k], k, x);
     var v1 = fm(y[k], k, y);
     if(fc(u1, v1)!==0) return false;
