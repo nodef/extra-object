@@ -1,11 +1,12 @@
-function isDisjoint(...xs: object[]): boolean {
-  if(xs.length===0) return true;
-  var x = xs[0], ys = xs.slice(1);
-  x: for(var k in x) {
+/**
+ * Checks if objects have no common keys.
+ * @param x an object
+ * @param y another object
+ */
+function isDisjoint(x: object, y: object): boolean {
+  for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
-    for(var y in ys)
-      if(!y.hasOwnProperty(k)) continue x;
-    return false;
+    if(y.hasOwnProperty(k)) return false;
   }
   return true;
 }
