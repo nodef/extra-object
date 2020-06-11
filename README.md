@@ -1,4 +1,4 @@
-An [object] is a collection of properties, with associated values.
+An [object] is a collection of properties, with associated values. [:running:] [:vhs:] [:package:] [:moon:] [:ledger:]
 
 
 ```javascript
@@ -32,3 +32,8 @@ Functional methods:
 [![nodef](https://i.imgur.com/yFUJ4GM.jpg)](https://nodef.github.io)
 
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+[:running:]: https://npm.runkit.com/extra-object
+[:vhs:]: https://asciinema.org/a/338251
+[:package:]: https://www.npmjs.com/package/extra-object
+[:moon:]: https://www.npmjs.com/package/extra-object.min
+[:ledger:]: https://unpkg.com/extra-object/
