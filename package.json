@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "2.0.130",
+  "version": "2.0.131",
   "description": "An object is a collection of properties, with associated values.",
   "main": "index.js",
   "module": "index.mjs",
@@ -95,8 +95,8 @@
   },
   "homepage": "https://github.com/nodef/extra-object#readme",
   "devDependencies": {
-    "extra-array": "^2.8.74",
+    "extra-array": "^2.8.75",
     "extra-build": "^1.0.177",
-    "extra-iterable": "^2.3.42"
+    "extra-iterable": "^2.3.43"
   }
 }
