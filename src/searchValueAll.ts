@@ -15,7 +15,7 @@ function searchValueAll(x: object, v: any, fc: compareFn=null, fm: mapFn=null): 
   for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
     var u1 = fm(x[k], k, x);
-    if(fc(u1, v1)===0) a.push(x[k]);
+    if(fc(u1, v1)===0) a.push(k);
   }
   return a;
 }
