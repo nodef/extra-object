@@ -1,5 +1,5 @@
 /**
- * Creates object from lisst.
+ * Creates object from lists.
  * @param ls lists, i.e. [keys, values]
  */
 function fromLists(ls: [Iterable<string>, Iterable<any>]): object {
