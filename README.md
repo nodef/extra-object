@@ -49,19 +49,30 @@ var x = {a: 1, b: 2, c: 3};
 | Method                | Action
 |-----------------------|-------
 | [is]                  | Checks if value is object.
+| [get]                 | Exchanges two values.
+| [set]                 | Exchanges two values.
+| [remove]              | Exchanges two values.
 | [swap]                | Exchanges two values.
 | [size]                | Gets size of object.
+|                       | 
+| [head]                | Combines entries from objects, preferring last.
+| [take]                | Combines entries from objects, preferring last.
+| [shift]               | Combines entries from objects, preferring last.
+| [fromEntries]         | Combines entries from objects, preferring last.
 |                       | 
 | [concat]              | Combines entries from objects, preferring last.
 | [flat]                | Flattens nested object to given depth.
 | [chunk]               | Breaks object into chunks of given size.
+| [filterAt]            | Keeps entries which pass a test.
 |                       | 
-| [min]                 | Finds smallest entry.
-| [max]                 | Finds largest entry.
-| [range]               | Finds smallest and largest entries.
+| [map]                 | Keeps entries which pass a test.
 | [filter]              | Keeps entries which pass a test.
+| [reduce]              | Keeps entries which pass a test.
+| [range]               | Finds smallest and largest entries.
 | [count]               | Counts values which satisfy a test.
 | [partition]           | Segregates values by test result.
+| [cartesianProduct]    | Combines entries from objects.
+| [some]                | Keeps entries which pass a test.
 | [zip]                 | Combines entries from objects.
 |                       | 
 | [union]               | Gives entries present in any object.
@@ -75,10 +86,12 @@ var x = {a: 1, b: 2, c: 3};
 | [entry]               | Picks an arbitrary entry.
 | [subobject]           | Picks an arbitrary subobject.
 |                       | 
+| [isEmpty]             | Checks if two objects are equal.
 | [isEqual]             | Checks if two objects are equal.
 | [compare]             | Compares two objects.
-| [search]              | Finds key of an entry passing a test.
 | [find]                | Finds value of an entry passing a test.
+| [search]              | Finds key of an entry passing a test.
+| [scanWhile]           | Finds key of an entry passing a test.
 
 <br>
 
