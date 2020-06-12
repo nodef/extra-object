@@ -1,8 +1,11 @@
-import get from './get';
-
-function set$(x: object, p: string[], v: any): object {
-  var xp = get(x, p.slice(-1));
-  if(xp && p.length) xp[p[p.length-1]] = v;
+/**
+ * Sets value at key.
+ * @param x an object (updated)
+ * @param k key
+ * @returns x
+ */
+function set$(x: object, k: string, v: any): object {
+  x[k] = v;
   return x;
 }
 export default set$;

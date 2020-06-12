@@ -1,6 +1,11 @@
-import remove$ from './remove$';
+import rejectAt from './rejectAt';
 
-function remove(x: object, p: string[]): object {
-  return remove$(Object.assign({}, x), p);
+/**
+ * Deletes an entry.
+ * @param x an object
+ * @param k key
+ */
+function remove(x: object, k: string): object {
+  return rejectAt(x, [k]);
 }
 export default remove;
