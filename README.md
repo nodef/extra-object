@@ -132,7 +132,6 @@ var x = {a: 1, b: 2, c: 3};
 [search]: https://github.com/nodef/extra-object/wiki/search
 [find]: https://github.com/nodef/extra-object/wiki/find
 [:running:]: https://npm.runkit.com/extra-object
-[:vhs:]: https://asciinema.org/a/338512
 [:package:]: https://www.npmjs.com/package/extra-object
 [:moon:]: https://www.npmjs.com/package/extra-object.min
 [:ledger:]: https://unpkg.com/extra-object/
@@ -150,3 +149,4 @@ var x = {a: 1, b: 2, c: 3};
 [some]: https://github.com/nodef/extra-object/wiki/some
 [isEmpty]: https://github.com/nodef/extra-object/wiki/isEmpty
 [scanWhile]: https://github.com/nodef/extra-object/wiki/scanWhile
+[:vhs:]: https://asciinema.org/a/338711
