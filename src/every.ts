@@ -1,4 +1,4 @@
-import searchUntil from './searchUntil';
+import scanWhile from './scanWhile';
 import type {testFn} from './_types';
 
 /**
@@ -8,6 +8,6 @@ import type {testFn} from './_types';
  * @param ths this argument
  */
 function every(x: object, fn: testFn, ths: object=null) {
-  return searchUntil(x, fn, ths)==null;
+  return scanWhile(x, fn, ths)==null;
 }
 export default every;

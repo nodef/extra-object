@@ -1,4 +1,4 @@
-import search from './search';
+import scanUntil from './scanUntil';
 import type {testFn} from './_types';
 
 /**
@@ -8,6 +8,6 @@ import type {testFn} from './_types';
  * @param ths this argument
  */
 function some(x: object, fn: testFn, ths: object=null) {
-  return search(x, fn, ths)!=null;
+  return scanUntil(x, fn, ths)!=null;
 }
 export default some;
