@@ -98,7 +98,7 @@ var x = {a: 1, b: 2, c: 3};
 
 <br>
 
-[![nodef](https://merferry.glitch.me/card/extra-array.svg)](https://nodef.github.io)
+[![nodef](https://merferry.glitch.me/card/extra-object.svg)](https://nodef.github.io)
 
 [(1)]: https://www.rottentomatoes.com/m/3_idiots/quotes/
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
