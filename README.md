@@ -8,7 +8,10 @@ Methods look like:
 - `swap()`: doesn't modify the object itself (pure).
 - `swap$()`: modifies the object itself (update).
 
-Some note i will fill up later.
+In the future when you think of just giving up on life, remember
+that the letter was in your hands, the cab was at the gate, only
+if you had thought about it once more, your entire life would
+have been better. [(1)]
 
 > Stability: Experimental.
 
@@ -49,30 +52,30 @@ var x = {a: 1, b: 2, c: 3};
 | Method                | Action
 |-----------------------|-------
 | [is]                  | Checks if value is object.
-| [get]                 | Exchanges two values.
-| [set]                 | Exchanges two values.
-| [remove]              | Exchanges two values.
+| [get]                 | Gets value at key.
+| [set]                 | Sets value at key.
+| [remove]              | Deletes an entry.
 | [swap]                | Exchanges two values.
 | [size]                | Gets size of object.
 |                       | 
-| [head]                | Combines entries from objects, preferring last.
-| [take]                | Combines entries from objects, preferring last.
-| [shift]               | Combines entries from objects, preferring last.
-| [fromEntries]         | Combines entries from objects, preferring last.
+| [head]                | Gets first entry.
+| [take]                | Keeps first n entries only.
+| [shift]               | Removes first entry.
+| [fromEntries]         | Creates object from entries.
 |                       | 
 | [concat]              | Combines entries from objects, preferring last.
 | [flat]                | Flattens nested object to given depth.
 | [chunk]               | Breaks object into chunks of given size.
-| [filterAt]            | Keeps entries which pass a test.
+| [filterAt]            | Gets object with given keys.
 |                       | 
-| [map]                 | Keeps entries which pass a test.
+| [map]                 | Updates values based on map function.
 | [filter]              | Keeps entries which pass a test.
-| [reduce]              | Keeps entries which pass a test.
+| [reduce]              | Reduces values to a single value.
 | [range]               | Finds smallest and largest entries.
 | [count]               | Counts values which satisfy a test.
 | [partition]           | Segregates values by test result.
-| [cartesianProduct]    | Combines entries from objects.
-| [some]                | Keeps entries which pass a test.
+| [cartesianProduct]    | Lists cartesian product of objects.
+| [some]                | Checks if any value satisfies a test.
 | [zip]                 | Combines entries from objects.
 |                       | 
 | [union]               | Gives entries present in any object.
@@ -86,17 +89,18 @@ var x = {a: 1, b: 2, c: 3};
 | [entry]               | Picks an arbitrary entry.
 | [subobject]           | Picks an arbitrary subobject.
 |                       | 
-| [isEmpty]             | Checks if two objects are equal.
+| [isEmpty]             | Checks if object is empty.
 | [isEqual]             | Checks if two objects are equal.
 | [compare]             | Compares two objects.
 | [find]                | Finds value of an entry passing a test.
 | [search]              | Finds key of an entry passing a test.
-| [scanWhile]           | Finds key of an entry passing a test.
+| [scanWhile]           | Finds key of first entry not passing a test.
 
 <br>
 
 [![nodef](https://merferry.glitch.me/card/extra-array.svg)](https://nodef.github.io)
 
+[(1)]: https://www.rottentomatoes.com/m/3_idiots/quotes/
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 [browserify]: https://www.npmjs.com/package/browserify
 [rollup]: https://www.npmjs.com/package/rollup
@@ -132,3 +136,17 @@ var x = {a: 1, b: 2, c: 3};
 [:package:]: https://www.npmjs.com/package/extra-object
 [:moon:]: https://www.npmjs.com/package/extra-object.min
 [:ledger:]: https://unpkg.com/extra-object/
+[get]: https://github.com/nodef/extra-object/wiki/get
+[set]: https://github.com/nodef/extra-object/wiki/set
+[remove]: https://github.com/nodef/extra-object/wiki/remove
+[head]: https://github.com/nodef/extra-object/wiki/head
+[take]: https://github.com/nodef/extra-object/wiki/take
+[shift]: https://github.com/nodef/extra-object/wiki/shift
+[fromEntries]: https://github.com/nodef/extra-object/wiki/fromEntries
+[filterAt]: https://github.com/nodef/extra-object/wiki/filterAt
+[map]: https://github.com/nodef/extra-object/wiki/map
+[reduce]: https://github.com/nodef/extra-object/wiki/reduce
+[cartesianProduct]: https://github.com/nodef/extra-object/wiki/cartesianProduct
+[some]: https://github.com/nodef/extra-object/wiki/some
+[isEmpty]: https://github.com/nodef/extra-object/wiki/isEmpty
+[scanWhile]: https://github.com/nodef/extra-object/wiki/scanWhile
