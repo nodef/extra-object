@@ -7,7 +7,7 @@ import type {testFn} from './_types';
  * @param fn test function (v, k, x)
  * @param ths this argument
  */
-function some(x: object, fn: testFn, ths: object=null) {
+function some(x: object, fn: testFn, ths: object=null): boolean {
   return scanUntil(x, fn, ths)!=null;
 }
 export default some;
