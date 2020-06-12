@@ -1,13 +1,3 @@
-CONFUSING PATTERNS
-- find*
-- map
-- ths?
-- (v, k, x) | (v, k) | (e)
-
-- .get in any vs here?
-
-- object.from(keys, values, deep=false) // object.zip(deep)
-- object.fromentries
 - object.zip(deep)
 https://www.npmjs.com/package/object-path
 
