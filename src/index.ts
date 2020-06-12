@@ -55,6 +55,7 @@ export {default as searchAll} from './searchAll';
 export {default as searchUntil} from './searchUntil';
 export {default as searchValue} from './searchValue';
 export {default as searchValueAll} from './searchValueAll';
+export {default as searchWhile} from './searchWhile';
 export {default as set$} from './set$';
 export {default as set} from './set';
 export {default as shift$} from './shift$';
