@@ -18,7 +18,7 @@ have been better. [(1)]
 ```javascript
 const object = require('extra-object');
 // import * as object from 'extra-object';
-// import * as object from 'https://unpkg.com/extra-object@2.0.130/index.mjs'; (deno)
+// import * as object from 'https://unpkg.com/extra-object@2.1.0/index.mjs'; (deno)
 
 var x = {a: 1, b: 2, c: 3, d: 4};
 object.swap(x, 'a', 'b');
