@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "2.0.137",
+  "version": "2.0.138",
   "description": "An object is a collection of properties, with associated values.",
   "main": "index.js",
   "module": "index.mjs",
@@ -68,6 +68,7 @@
     "searchUntil",
     "searchValue",
     "searchValueAll",
+    "searchWhile",
     "set",
     "shift",
     "size",

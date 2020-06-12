@@ -78,7 +78,7 @@ var x = {a: 1, b: 2, c: 3};
 | [isEqual]             | Checks if two objects are equal.
 | [compare]             | Compares two objects.
 | [search]              | Finds key of an entry passing a test.
-| [find]                | Finds first value passing a test.
+| [find]                | Finds value of an entry passing a test.
 
 <br>
 
