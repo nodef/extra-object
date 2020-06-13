@@ -19,6 +19,7 @@ export {default as find} from './find';
 export {default as findAll} from './findAll';
 export {default as flat} from './flat';
 export {default as flatMap} from './flatMap';
+export {default as forEach} from './forEach';
 export {default as fromEntries} from './fromEntries';
 export {default as fromLists} from './fromLists';
 export {default as get} from './get';
