@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "description": "An object is a collection of properties, with associated values.",
   "main": "index.js",
   "module": "index.mjs",

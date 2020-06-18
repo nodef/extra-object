@@ -6,7 +6,7 @@ import type {mapFn, tillFn} from './_types';
 /**
  * Combines entries from objects.
  * @param xs objects
- * @param fm map function (vs, k, null)
+ * @param fm map function (vs, k)
  * @param ft till function (dones) (some)
  * @param vd default value
  */
