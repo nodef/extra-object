@@ -11,7 +11,7 @@ import type {compareFn, mapFn} from './_types';
  */
 function searchValueAll(x: object, v: any, fc: compareFn=null, fm: mapFn=null): string[] {
   var fc = fc||cmp, fm = fm||id;
-  var v1 = fm(v, null, x), a = [];
+  var v1 = fm(v, null, null), a = [];
   for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
     var u1 = fm(x[k], k, x);

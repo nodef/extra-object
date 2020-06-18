@@ -24,6 +24,7 @@ export {default as forEach} from './forEach';
 export {default as fromEntries} from './fromEntries';
 export {default as fromLists} from './fromLists';
 export {default as get} from './get';
+export {default as getAll} from './getAll';
 export {default as head} from './head';
 export {default as intersection$} from './intersection$';
 export {default as intersection} from './intersection';

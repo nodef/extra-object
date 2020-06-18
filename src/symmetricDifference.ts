@@ -6,8 +6,8 @@ import unionKeys from './unionKeys';
  * @param y another object
  */
 function symmetricDifference(x: object, y: object): object {
-  var ks = unionKeys(x, y), a = {};
-  for(var k of ks) {
+  var a = {};
+  for(var k of unionKeys(x, y)) {
     var xk = x.hasOwnProperty(k);
     var yk = y.hasOwnProperty(k);
     if(xk && !yk) a[k] = x[k];

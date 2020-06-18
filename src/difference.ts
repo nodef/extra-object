@@ -7,8 +7,7 @@ function difference(x: object, y: object): object {
   var a = {};
   for(var k in x) {
     if(!x.hasOwnProperty(k)) continue;
-    if(y.hasOwnProperty(k)) continue;
-    a[k] = x[k];
+    if(!y.hasOwnProperty(k)) a[k] = x[k];
   }
   return a;
 }
