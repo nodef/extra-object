@@ -5,9 +5,8 @@ import type {testFn} from './_types';
  * Checks if any value satisfies a test.
  * @param x an object
  * @param ft test function (v, k, x)
- * @param ths this argument
  */
-function some(x: object, ft: testFn, ths: object=null): boolean {
-  return scanUntil(x, ft, ths)!=null;
+function some(x: object, ft: testFn): boolean {
+  return scanUntil(x, ft)!=null;
 }
 export default some;

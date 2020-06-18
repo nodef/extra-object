@@ -4,7 +4,7 @@ import type {mapFn} from './_types';
 /**
  * Lists cartesian product of objects.
  * @param xs objects
- * @param fm map function (v, null, null)
+ * @param fm map function (vs)
  */
 function* cartesianProduct(xs: object[], fm: mapFn=null): IterableIterator<any> {
   var fm = fm||id;
