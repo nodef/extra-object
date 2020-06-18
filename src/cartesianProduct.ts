@@ -4,10 +4,10 @@ import type {mapFn} from './_types';
 /**
  * Lists cartesian product of objects.
  * @param xs objects
- * @param fn map function (v, null, null)
+ * @param fm map function (v, null, null)
  */
-function* cartesianProduct(xs: object[], fn: mapFn=null): IterableIterator<any> {
-  var fn = fn||id;
+function* cartesianProduct(xs: object[], fm: mapFn=null): IterableIterator<any> {
+  var fm = fm||id;
   var XS  = xs.length;
   var kss = xs.map(x => Object.keys(x));
   var ls = kss.map(ks => ks.length);
@@ -19,7 +19,7 @@ function* cartesianProduct(xs: object[], fn: mapFn=null): IterableIterator<any> 
       var ks = kss[n], k = ks[i];
       a[k] = x[k];
     }
-    yield fn(a, null, null);
+    yield fm(a, null, null);
     for(var r=XS-1; r>=0; r--) {
       is[r]++;
       if(is[r]<ls[r]) break;
