@@ -34,7 +34,7 @@ object.searchAll(x, v => Math.abs(v) === 2);
 // [ 'b', 'd' ]
 
 var x = {a: 1, b: 2, c: 3};
-[...object.subobjects(x)];
+[...object.subsets(x)];
 // [
 //   {},
 //   { a: 1 },
@@ -87,7 +87,7 @@ var x = {a: 1, b: 2, c: 3};
 | [key]                 | Picks an arbitrary key.
 | [value]               | Picks an arbitrary value.
 | [entry]               | Picks an arbitrary entry.
-| [subobject]           | Picks an arbitrary subobject.
+| [subset]              | Picks an arbitrary subset.
 |                       | 
 | [isEmpty]             | Checks if object is empty.
 | [isEqual]             | Checks if two objects are equal.
@@ -126,7 +126,7 @@ var x = {a: 1, b: 2, c: 3};
 [key]: https://github.com/nodef/extra-object/wiki/key
 [value]: https://github.com/nodef/extra-object/wiki/value
 [entry]: https://github.com/nodef/extra-object/wiki/entry
-[subobject]: https://github.com/nodef/extra-object/wiki/subobject
+[subset]: https://github.com/nodef/extra-object/wiki/subset
 [isEqual]: https://github.com/nodef/extra-object/wiki/isEqual
 [compare]: https://github.com/nodef/extra-object/wiki/compare
 [search]: https://github.com/nodef/extra-object/wiki/search
@@ -149,4 +149,4 @@ var x = {a: 1, b: 2, c: 3};
 [some]: https://github.com/nodef/extra-object/wiki/some
 [isEmpty]: https://github.com/nodef/extra-object/wiki/isEmpty
 [scanWhile]: https://github.com/nodef/extra-object/wiki/scanWhile
-[:vhs:]: https://asciinema.org/a/338711
+[:vhs:]: https://asciinema.org/a/341146
