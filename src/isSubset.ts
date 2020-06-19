@@ -3,13 +3,13 @@ import cmp from './_cmp';
 import type {compareFn, mapFn} from './_types';
 
 /**
- * Checks if object has a subobject.
+ * Checks if object has a subset.
  * @param x an object
- * @param y subobject?
+ * @param y subset?
  * @param fc compare function (a, b)
  * @param fm map function (v, k, x)
  */
-function isSubobject(x: object, y: object, fc: compareFn=null, fm: mapFn=null): boolean {
+function isSubset(x: object, y: object, fc: compareFn=null, fm: mapFn=null): boolean {
   var fc = fc||cmp, fm = fm||id;
   for(var k in y) {
     if(!y.hasOwnProperty(k)) continue;
@@ -20,4 +20,4 @@ function isSubobject(x: object, y: object, fc: compareFn=null, fm: mapFn=null): 
   }
   return true;
 }
-export default isSubobject;
+export default isSubset;
