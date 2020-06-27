@@ -1,7 +1,6 @@
 - object.zip(deep)
 https://www.npmjs.com/package/object-path
 - set combine
-- flat mapfn
 
 nested-object-assign	object	Package to support nested merging of objects & properties, using Object.Assign
 flat-properties	object	Flat properties from hierarchy object data.

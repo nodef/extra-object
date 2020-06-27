@@ -1,6 +1,6 @@
+import id from './_id';
 import is from './is';
 import type {mapFn, testFn} from './_types';
-import id from './_id';
 
 function flatTo(x: object, dep: number, fm: mapFn, ft: testFn, a: object): object {
   for(var k in x) {
