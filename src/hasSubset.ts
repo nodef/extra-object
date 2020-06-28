@@ -9,7 +9,7 @@ import type {compareFn, mapFn} from './_types';
  * @param fc compare function (a, b)
  * @param fm map function (v, k, x)
  */
-function isSubset(x: object, y: object, fc: compareFn=null, fm: mapFn=null): boolean {
+function hasSubset(x: object, y: object, fc: compareFn=null, fm: mapFn=null): boolean {
   var fc = fc||cmp, fm = fm||id;
   for(var k in y) {
     if(!y.hasOwnProperty(k)) continue;
@@ -20,4 +20,4 @@ function isSubset(x: object, y: object, fc: compareFn=null, fm: mapFn=null): boo
   }
   return true;
 }
-export default isSubset;
+export default hasSubset;

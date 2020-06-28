@@ -8,7 +8,7 @@ import type {compareFn, mapFn} from './_types';
  * @param fc compare function (a, b)
  * @param fm map function (v, k, x)
  */
-function isValue(x: object, v: any, fc: compareFn=null, fm: mapFn=null): boolean {
+function hasValue(x: object, v: any, fc: compareFn=null, fm: mapFn=null): boolean {
   return searchValue(x, v, fc, fm)!=null;
 }
-export default isValue;
+export default hasValue;
