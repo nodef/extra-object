@@ -11,6 +11,9 @@ import getPath from './getPath';
  */
 function setPath$(x: object, p: string[], v: any): any {
   var y = getPath(x, p.slice(0, -1));
+  if (p.includes('__proto__') || p.includes('constructor') || p.includes('prototype')) {
+        return false;
+   }
   if(is(y)) y[last(p)] = v;
   return x;
 }
