@@ -51,23 +51,18 @@ var x = {a: 1, b: 2, c: 3};
 
 | Method                | Action
 |-----------------------|-------
-| [is]                  | Checks if value is object.
-| [get]                 | Gets value at key.
-| [set]                 | Sets value at key.
-| [remove]              | Deletes an entry.
-| [swap]                | Exchanges two values.
 | [size]                | Gets size of object.
-|                       | 
+|                       |
 | [head]                | Gets first entry.
 | [take]                | Keeps first n entries only.
 | [shift]               | Removes first entry.
 | [fromEntries]         | Creates object from entries.
-|                       | 
+|                       |
 | [concat]              | Combines entries from objects, preferring last.
 | [flat]                | Flattens nested object to given depth.
 | [chunk]               | Breaks object into chunks of given size.
 | [filterAt]            | Gets object with given keys.
-|                       | 
+|                       |
 | [map]                 | Updates values based on map function.
 | [filter]              | Keeps entries which pass a test.
 | [reduce]              | Reduces values to a single value.
@@ -77,18 +72,18 @@ var x = {a: 1, b: 2, c: 3};
 | [cartesianProduct]    | Lists cartesian product of objects.
 | [some]                | Checks if any value satisfies a test.
 | [zip]                 | Combines entries from objects.
-|                       | 
+|                       |
 | [union]               | Gives entries present in any object.
 | [intersection]        | Gives entries present in both objects.
 | [difference]          | Gives entries of object not present in another.
 | [symmetricDifference] | Gives entries not present in both objects.
 | [isDisjoint]          | Checks if objects have no common keys.
-|                       | 
+|                       |
 | [key]                 | Picks an arbitrary key.
 | [value]               | Picks an arbitrary value.
 | [entry]               | Picks an arbitrary entry.
 | [subset]              | Picks an arbitrary subset.
-|                       | 
+|                       |
 | [isEmpty]             | Checks if object is empty.
 | [isEqual]             | Checks if two objects are equal.
 | [compare]             | Compares two objects.
