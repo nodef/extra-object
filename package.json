@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "An object is a collection of properties, with associated values.",
   "private": true,
   "main": "index.js",
