@@ -201,8 +201,8 @@ export function fromLists(x: Lists): object {
  * @returns x=y: 0, otherwise: -ve/+ve
  */
 export function compare(x: object, y: object, fc: CompareFunction | null=null, fm: MapFunction | null=null): number {
-  var fc = fc || COMPARE;
-  var fm = fm || IDENTITY;
+  var fc = fc || COMPARE<any>;
+  var fm = fm || IDENTITY<any>;
   var ks = unionKeys(x, y);
   for (var k of ks) {
     if (!x.hasOwnProperty(k)) return -1;
@@ -231,8 +231,8 @@ export function isEqual(x: object, y: object, fc: CompareFunction | null=null, f
 
 
 
-// LENGTH
-// ------
+// SIZE
+// ----
 
 /**
  * Get the number of keys in an object.
@@ -275,7 +275,7 @@ export function get(x: object, k: string): any {
  * Get values at keys.
  * @param x an object
  * @param ks keys
- * @returns [x[k], x[l], ...] | [k, l, ...] = keys
+ * @returns [x[k], x[l], ...] | [k, l, ...] = ks
  */
 export function getAll(x: object, ks: string[]): any[] {
   return ks.map(k => x[k]);
@@ -344,7 +344,7 @@ export function set$(x: object, k: string, v: any): object {
  */
 export function setPath$(x: object, p: string[], v: any): any {
   var y = getPath(x, p.slice(0, -1));
-  var k = arrayLast(p, '');
+  var k = arrayLast(p, "");
   if (is(y) && k && !BAD_KEYS.includes(k)) y[k] = v;
   return x;
 }
@@ -383,9 +383,9 @@ export function swap$(x: object, k: string, l: string): object {
  */
 export function remove(x: object, k: string): object {
   var a = {};
-  for (var k in x) {
+  for (var l in x) {
     if (!x.hasOwnProperty(k)) continue;
-    if (k!==k) a[k] = x[k];
+    if (l!==k) a[l] = x[l];
   }
   return a;
 }
@@ -411,7 +411,7 @@ export function remove$(x: object, k: string): object {
  */
 export function removePath$(x: object, p: string[]): any {
   var y = getPath(x, p.slice(0, -1));
-  var k = arrayLast(p, '');
+  var k = arrayLast(p, "");
   if (is(y) && k) delete y[k];
   return x;
 }
@@ -445,7 +445,7 @@ export function count(x: object, ft: TestFunction): number {
  * @returns Map \{value ⇒ count\}
  */
 export function countAs(x: object, fm: MapFunction | null=null): Map<any, number> {
-  var fm = fm || IDENTITY;
+  var fm = fm || IDENTITY<any>;
   var a  = new Map();
   for (var k in x) {
     if (!x.hasOwnProperty(k)) continue;
@@ -526,8 +526,8 @@ export function range(x: object, fc: CompareFunction | null=null, fm: MapFunctio
  * @returns [min_entry, max_entry]
  */
 export function rangeEntries(x: object, fc: CompareFunction | null=null, fm: MapFunction | null=null): [[string, any], [string, any]] {
-  var fc = fc || COMPARE;
-  var fm = fm || IDENTITY;
+  var fc = fc || COMPARE<any>;
+  var fm = fm || IDENTITY<any>;
   var mk: string, mu: any, mv: any;
   var nk: string, nu: any, nv: any;
   var i = 0;
@@ -731,8 +731,8 @@ export function hasValue(x: object, v: any, fc: CompareFunction | null=null, fm:
  * @returns [k, v] ∈ x? | [k, v] = e
  */
 export function hasEntry(x: object, e: [string, any], fc: CompareFunction | null=null, fm: MapFunction | null=null): boolean {
-  var fc = fc || COMPARE;
-  var fm = fm || IDENTITY;
+  var fc = fc || COMPARE<any>;
+  var fm = fm || IDENTITY<any>;
   var [k, v] = e;
   return x.hasOwnProperty(k) && fc(fm(x[k], k, x), v)===0;
 }
@@ -747,8 +747,8 @@ export function hasEntry(x: object, e: [string, any], fc: CompareFunction | null
  * @returns y ⊆ x?
  */
 export function hasSubset(x: object, y: object, fc: CompareFunction | null=null, fm: MapFunction | null=null): boolean {
-  var fc = fc || COMPARE;
-  var fm = fm || IDENTITY;
+  var fc = fc || COMPARE<any>;
+  var fm = fm || IDENTITY<any>;
   for (var k of Object.keys(y)) {
     if (!x.hasOwnProperty(k)) return false;
     var wx = fm(x[k], k, x);
@@ -768,6 +768,20 @@ export function hasSubset(x: object, y: object, fc: CompareFunction | null=null,
 export function find(x: object, ft: TestFunction): any {
   for (var k of Object.keys(x))
     if (ft(x[k], k, x)) return x[k];
+}
+
+
+/**
+ * Find values of entries passing a test.
+ * @param x an object
+ * @param ft test function (v, k, x)
+ * @returns [vₒ, v₁, ...] | ft(vᵢ) = true; [kᵢ, vᵢ] ∈ x
+ */
+export function findAll(x: object, ft: TestFunction): any[] {
+  var a = [];
+  for (var k of Object.keys(x))
+    if (ft(x[k], k, x)) a.push(x[k]);
+  return a;
 }
 
 
@@ -807,8 +821,8 @@ export function searchAll(x: object, ft: TestFunction): string[] {
  * @returns k | fm(x[k]) ≈ fm(v)
  */
 export function searchValue(x: object, v: any, fc: CompareFunction | null=null, fm: MapFunction | null=null): string {
-  var fc = fc || COMPARE;
-  var fm = fm || IDENTITY;
+  var fc = fc || COMPARE<any>;
+  var fm = fm || IDENTITY<any>;
   var w  = fm(v, null, null);
   for (var k of Object.keys(x)) {
     var wx = fm(x[k], k, x);
@@ -827,8 +841,8 @@ export function searchValue(x: object, v: any, fc: CompareFunction | null=null, 
  * @returns [k₀, k₁, ...] | fm(x[kᵢ]) ≈ fm(v)
  */
 export function searchValueAll(x: object, v: any, fc: CompareFunction | null=null, fm: MapFunction | null=null): string[] {
-  var fc = fc || COMPARE;
-  var fm = fm || IDENTITY;
+  var fc = fc || COMPARE<any>;
+  var fm = fm || IDENTITY<any>;
   var w  = fm(v, null, null), a = [];
   for (var k of Object.keys(x)) {
     var wx = fm(x[k], k, x);
@@ -862,7 +876,8 @@ export function forEach(x: object, fp: ProcessFunction): void {
  * @param ft test function (v, k, x)
  * @returns true if ft(vᵢ) = true for some [kᵢ, vᵢ] ∈ x
  */
-export function some(x: object, ft: TestFunction): boolean {
+export function some(x: object, ft: TestFunction | null=null): boolean {
+  var ft = ft || IDENTITY as TestFunction;
   for (var k in x) {
     if (!x.hasOwnProperty(k)) continue;
     if (ft(x[k], k, x)) return true;
@@ -1066,7 +1081,7 @@ export function rejectAt$(x: object, ks: string[]): object {
  * @returns flat map
  */
 export function flat(x: object, n: number=-1, fm: MapFunction | null=null, ft: TestFunction | null=null): object {
-  var fm = fm || IDENTITY;
+  var fm = fm || IDENTITY<any>;
   var ft = ft || is;
   return flatTo$({}, x, n, fm, ft);
 }
@@ -1090,7 +1105,7 @@ function flatTo$(a: object, x: object, dep: number, fm: MapFunction, ft: TestFun
  * @returns flat map
  */
 export function flatMap(x: object, fm: MapFunction | null=null, ft: TestFunction | null=null): object {
-  var fm = fm || IDENTITY;
+  var fm = fm || IDENTITY<any>;
   var ft = ft || is;
   var a  = {};
   for (var k in x) {
@@ -1112,7 +1127,7 @@ export function flatMap(x: object, fm: MapFunction | null=null, ft: TestFunction
  * @returns \{"k₀": fm([x₀[k₀], x₁[k₀], ...]), "k₁": fm([x₀[k₁], x₁[k₁], ...]), ...\}
  */
 export function zip(xs: object[], fm: MapFunction | null=null, fe: EndFunction | null=null, vd?: any): object {
-  var fm = fm || IDENTITY;
+  var fm = fm || IDENTITY<any>;
   var fe = fe || some as EndFunction;
   var ks = unionKeys(...xs), a = {};
   for (var k of ks) {
@@ -1154,7 +1169,7 @@ export function partition(x: object, ft: TestFunction): [object, object] {
  * @returns Map \{key ⇒ values\}
  */
 export function partitionAs(x: object, fm: MapFunction): Map<any, object> {
-  var fm = fm || IDENTITY;
+  var fm = fm || IDENTITY<any>;
   var a  = new Map();
   for (var k in x) {
     if (!x.hasOwnProperty(k)) continue;
@@ -1417,7 +1432,7 @@ export function symmetricDifference$(x: object, y: object): object {
  * @returns x₀ × x₁ × ... = \{\{[k₀, v₀], [k₁, v₁], ...\} | [k₀, v₀] ∈ x₀, [k₁, v₁] ∈ x₁, ...]\}
  */
 export function* cartesianProduct(xs: object[], fm: MapFunction | null=null): IterableIterator<any> {
-  var fm = fm || IDENTITY;
+  var fm = fm || IDENTITY<any>;
   var XS = xs.length;
   var kx = xs.map(x => Object.keys(x));
   var ls = kx.map(ks => ks.length);
