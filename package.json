@@ -1,7 +1,7 @@
 {
   "name": "extra-object",
-  "version": "3.0.4",
-  "description": "An object is a collection of properties, with associated values.",
+  "version": "3.0.5",
+  "description": "A collection of methods for working with Objects.",
   "main": "index.js",
   "module": "index.mjs",
   "sideEffects": false,
@@ -15,7 +15,6 @@
     "publish-docs": "node ./build publish-docs",
     "publish-packages": "node ./build publish-packages"
   },
-  "runkitExampleFilename": "example.js",
   "keywords": [
     "extra",
     "object"
