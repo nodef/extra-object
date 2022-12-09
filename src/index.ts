@@ -4,6 +4,7 @@ import {
 } from "extra-function";
 import {
   last              as arrayLast,
+  some              as arraySome,
   subsequences      as arraySubsequences,
   randomValue       as arrayRandomValue,
   randomSubsequence as arrayRandomSubsequence,
@@ -1128,7 +1129,7 @@ export function flatMap(x: object, fm: MapFunction | null=null, ft: TestFunction
  */
 export function zip(xs: object[], fm: MapFunction | null=null, fe: EndFunction | null=null, vd?: any): object {
   var fm = fm || IDENTITY<any>;
-  var fe = fe || some as EndFunction;
+  var fe = fe || arraySome as EndFunction;
   var ks = unionKeys(...xs), a = {};
   for (var k of ks) {
     var ds = xs.map(x => !x.hasOwnProperty(k));
