@@ -169,16 +169,16 @@ var x = {a: 1, b: 2, c: 3};
 | [join] | Join entries together into a string. |
 |  |  |
 | [isDisjoint] | Check if objects have no common keys. |
-| [unionKeys] | Give keys present in any object. |
-| [union] | Give entries present in any object. |
-| [union$] | Give entries present in any object. |
-| [intersectionKeys] | Give keys present in all objects. |
-| [intersection] | Give entries present in both objects. |
-| [intersection$] | Give entries present in both objects. |
-| [difference] | Give entries not present in another object. |
-| [difference$] | Give entries not present in another object. |
-| [symmetricDifference] | Give entries not present in both objects. |
-| [symmetricDifference$] | Give entries not present in both objects. |
+| [unionKeys] | Obtain keys present in any object. |
+| [union] | Obtain entries present in any object. |
+| [union$] | Obtain entries present in any object. |
+| [intersectionKeys] | Obtain keys present in all objects. |
+| [intersection] | Obtain entries present in both objects. |
+| [intersection$] | Obtain entries present in both objects. |
+| [difference] | Obtain entries not present in another object. |
+| [difference$] | Obtain entries not present in another object. |
+| [symmetricDifference] | Obtain entries not present in both objects. |
+| [symmetricDifference$] | Obtain entries not present in both objects. |
 | [cartesianProduct] | List cartesian product of objects. |
 
 <br>

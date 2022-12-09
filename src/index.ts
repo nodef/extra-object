@@ -1261,7 +1261,7 @@ export function isDisjoint(x: object, y: object): boolean {
 
 
 /**
- * Give keys present in any object.
+ * Obtain keys present in any object.
  * @param xs objects
  * @returns [k₀, k₁, ...] | [kᵢ, vᵢ] ∈ x₀ ∪ x₁, ...; [x₀, x₁, ...] = xs
  */
@@ -1276,7 +1276,7 @@ export function unionKeys(...xs: object[]): Set<string> {
 
 
 /**
- * Give entries present in any object.
+ * Obtain entries present in any object.
  * @param x an object
  * @param y another object
  * @param fc combine function (a, b)
@@ -1288,7 +1288,7 @@ export function union(x: object, y: object, fc: CombineFunction | null=null): ob
 
 
 /**
- * Give entries present in any object.
+ * Obtain entries present in any object.
  * @param x an object (updated)
  * @param y another object
  * @param fc combine function (a, b)
@@ -1306,7 +1306,7 @@ export function union$(x: object, y: object, fc: CombineFunction | null=null): o
 
 
 /**
- * Give keys present in all objects.
+ * Obtain keys present in all objects.
  * @param xs objects
  * @returns [k₀, k₁, ...] | [kᵢ, vᵢ] ∈ x₀ ∩ x₁, ...; [x₀, x₁, ...] = xs
  */
@@ -1325,7 +1325,7 @@ export function intersectionKeys(...xs: object[]): Set<string> {
 
 
 /**
- * Give entries present in both objects.
+ * Obtain entries present in both objects.
  * @param x an object
  * @param y another object
  * @param fc combine function (a, b)
@@ -1344,7 +1344,7 @@ export function intersection(x: object, y: object, fc: CombineFunction | null=nu
 
 
 /**
- * Give entries present in both objects.
+ * Obtain entries present in both objects.
  * @param x an object (updated)
  * @param y another object
  * @param fc combine function (a, b)
@@ -1362,7 +1362,7 @@ export function intersection$(x: object, y: object, fc: CombineFunction | null=n
 
 
 /**
- * Give entries not present in another object.
+ * Obtain entries not present in another object.
  * @param x an object
  * @param y another object
  * @returns x - y = \{[kᵢ, vᵢ] | [kᵢ, vᵢ] ∈ x, [kᵢ, *] ∉ y\}
@@ -1378,7 +1378,7 @@ export function difference(x: object, y: object): object {
 
 
 /**
- * Give entries not present in another object.
+ * Obtain entries not present in another object.
  * @param x an object (updated)
  * @param y another object
  * @returns x = x - y = \{[kᵢ, vᵢ] | [kᵢ, vᵢ] ∈ x, [kᵢ, *] ∉ y\}
@@ -1393,7 +1393,7 @@ export function difference$(x: object, y: object): object {
 
 
 /**
- * Give entries not present in both objects.
+ * Obtain entries not present in both objects.
  * @param x an object
  * @param y another object
  * @returns x-y ∪ y-x
@@ -1411,7 +1411,7 @@ export function symmetricDifference(x: object, y: object): object {
 
 
 /**
- * Give entries not present in both objects.
+ * Obtain entries not present in both objects.
  * @param x an object (updated)
  * @param y another object
  * @returns x = x-y ∪ y-x
