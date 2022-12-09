@@ -545,9 +545,9 @@ test("randomSubset", () => {
 
 test("has", () => {
   var x = {a: 1, b: 2, c: -3};
-  var a = has(x, 'd');
+  var a = has(x, "d");
   expect(a).toBe(false);
-  var a = has(x, 'c');
+  var a = has(x, "c");
   expect(a).toBe(true);
 });
 
@@ -565,11 +565,11 @@ test("hasValue", () => {
 
 test("hasEntry", () => {
   var x = {a: 1, b: 2, c: -3};
-  var a = hasEntry(x, ['c', 3]);
+  var a = hasEntry(x, ["c", 3]);
   expect(a).toBe(false);
-  var a = hasEntry(x, ['c', 3], (a, b) => Math.abs(a) - Math.abs(b));
+  var a = hasEntry(x, ["c", 3], (a, b) => Math.abs(a) - Math.abs(b));
   expect(a).toBe(true);
-  var a = hasEntry(x, ['c', 3], null, v => Math.abs(v));
+  var a = hasEntry(x, ["c", 3], null, v => Math.abs(v));
   expect(a).toBe(true);
 });
 
@@ -610,7 +610,7 @@ test("findAll", () => {
 test("search", () => {
   var x = {a: 1, b: 2, c: 3, d: 2};
   var a = search(x, v => v === 2);
-  expect(a).toBe('b');
+  expect(a).toBe("b");
   var a = search(x, v => v === 4);
   expect(a).toBeNull();
 });
@@ -619,31 +619,31 @@ test("search", () => {
 test("searchAll", () => {
   var x = {a: 1, b: 2, c: 3, d: -2};
   var a = searchAll(x, v => v === 2);
-  expect(a).toStrictEqual(['b']);
+  expect(a).toStrictEqual(["b"]);
   var a = searchAll(x, v => Math.abs(v) === 2);
-  expect(a).toStrictEqual(['b', 'd']);
+  expect(a).toStrictEqual(["b", "d"]);
 });
 
 
 test("searchValue", () => {
   var x = {a: 1, b: -2, c: 3, d: 2, e: 5};
   var a = searchValue(x, 2);
-  expect(a).toBe('d');
+  expect(a).toBe("d");
   var a = searchValue(x, 2, (a, b) => Math.abs(a) - Math.abs(b));
-  expect(a).toBe('b');
+  expect(a).toBe("b");
   var a = searchValue(x, 2, null, v => Math.abs(v));
-  expect(a).toBe('b');
+  expect(a).toBe("b");
 });
 
 
 test("searchValueAll", () => {
   var x = {a: 1, b: -2, c: 3, d: 2, e: 5};
   var a = searchValueAll(x, 2);
-  expect(a).toStrictEqual(['d']);
+  expect(a).toStrictEqual(["d"]);
   var a = searchValueAll(x, 2, (a, b) => Math.abs(a) - Math.abs(b));
-  expect(a).toStrictEqual(['b', 'd']);
+  expect(a).toStrictEqual(["b", "d"]);
   var a = searchValueAll(x, 2, null, v => Math.abs(v));
-  expect(a).toStrictEqual(['b', 'd']);
+  expect(a).toStrictEqual(["b", "d"]);
 });
 
 
@@ -724,20 +724,20 @@ test("filter$", () => {
 
 test("filterAt", () => {
   var x = {a: 1, b: 2, c: 3, d: 4, e: 5};
-  var a = filterAt(x, ['a', 'c', 'e']);
+  var a = filterAt(x, ["a", "c", "e"]);
   expect(a).toStrictEqual({a: 1, c: 3, e: 5});
-  var a = filterAt(x, ['b', 'd']);
+  var a = filterAt(x, ["b", "d"]);
   expect(a).toStrictEqual({b: 2, d: 4});
 });
 
 
 test("filterAt$", () => {
   var x = {a: 1, b: 2, c: 3, d: 4, e: 5};
-  var a = filterAt$(x, ['a', 'c', 'e']);
+  var a = filterAt$(x, ["a", "c", "e"]);
   expect(a).toStrictEqual({a: 1, c: 3, e: 5});
   expect(x).toStrictEqual({a: 1, c: 3, e: 5});
   var x = {a: 1, b: 2, c: 3, d: 4, e: 5};
-  var a = filterAt$(x, ['b', 'd']);
+  var a = filterAt$(x, ["b", "d"]);
   expect(a).toStrictEqual({b: 2, d: 4});
 });
 
@@ -764,20 +764,20 @@ test("reject$", () => {
 
 test("rejectAt", () => {
   var x = {a: 1, b: 2, c: 3, d: 4, e: 5};
-  var a = rejectAt(x, ['a', 'c', 'e']);
+  var a = rejectAt(x, ["a", "c", "e"]);
   expect(a).toStrictEqual({b: 2, d: 4});
-  var a = rejectAt(x, ['b', 'd']);
+  var a = rejectAt(x, ["b", "d"]);
   expect(a).toStrictEqual({a: 1, c: 3, e: 5});
 });
 
 
 test("rejectAt$", () => {
   var x = {a: 1, b: 2, c: 3, d: 4, e: 5};
-  var a = rejectAt$(x, ['a', 'c', 'e']);
+  var a = rejectAt$(x, ["a", "c", "e"]);
   expect(a).toStrictEqual({b: 2, d: 4});
   expect(x).toStrictEqual({b: 2, d: 4});
   var x = {a: 1, b: 2, c: 3, d: 4, e: 5};
-  var a = rejectAt$(x, ['b', 'd']);
+  var a = rejectAt$(x, ["b", "d"]);
   expect(a).toStrictEqual({a: 1, c: 3, e: 5});
 });
 
@@ -893,9 +893,9 @@ test("concat$", () => {
 test("join", () => {
   var x = {a: 1, b: 2, c: 3};
   var a = join(x);
-  expect(a).toBe('a=1,b=2,c=3');
-  var a = join(x, ', ', ' => ');
-  expect(a).toBe('a => 1, b => 2, c => 3');
+  expect(a).toBe("a=1,b=2,c=3");
+  var a = join(x, ", ", " => ");
+  expect(a).toBe("a => 1, b => 2, c => 3");
 });
 
 
@@ -917,7 +917,7 @@ test("unionKeys", () => {
   var x = {a: 1, b: 2, c: 3, d: 4};
   var y = {b: 20, c: 30, e: 50};
   var a = unionKeys(x, y);
-  expect(a).toStrictEqual(new Set(['a', 'b', 'c', 'd', 'e']));
+  expect(a).toStrictEqual(new Set(["a", "b", "c", "d", "e"]));
 });
 
 
@@ -948,7 +948,7 @@ test("intersectionKeys", () => {
   var x = {a: 1, b: 2, c: 3, d: 4};
   var y = {b: 20, c: 30, e: 50};
   var a = intersectionKeys(x, y);
-  expect(a).toStrictEqual(new Set(['b', 'c']));
+  expect(a).toStrictEqual(new Set(["b", "c"]));
 });
 
 
