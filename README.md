@@ -192,6 +192,7 @@ var x = {a: 1, b: 2, c: 3};
 
 [![](https://i.imgur.com/f9LT8Xu.png)](https://www.youtube.com/watch?v=nrUszqrlvi8)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+[![DOI](https://zenodo.org/badge/133806024.svg)](https://zenodo.org/badge/latestdoi/133806024)
 [![Coverage Status](https://coveralls.io/repos/github/nodef/extra-object/badge.svg?branch=master)](https://coveralls.io/github/nodef/extra-object?branch=master)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/27933753bc28ffe2e9dd/test_coverage)](https://codeclimate.com/github/nodef/extra-object/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/27933753bc28ffe2e9dd/maintainability)](https://codeclimate.com/github/nodef/extra-object/maintainability)
