@@ -708,6 +708,7 @@ export {randomSubset as subset};
 export function has(x: object, k: string): boolean {
   return x.hasOwnProperty(k);
 }
+export {has as hasKey};
 
 
 /**
