@@ -32,7 +32,7 @@ performing **functional** operations, **manipulating** it in various ways,
 **combining** together objects or its entries, of performing **set operations**
 upon it.
 
-All functions except `from*()` take set as 1st parameter. Methods like
+All functions except `from*()` take object as 1st parameter. Methods like
 `swap()` are pure and do not modify the object itself, while methods like
 `swap$()` *do modify (update)* the object itself.
 

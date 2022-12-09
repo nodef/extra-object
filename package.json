@@ -1,6 +1,6 @@
 {
   "name": "extra-object",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "A collection of methods for working with Objects.",
   "main": "index.js",
   "module": "index.mjs",
