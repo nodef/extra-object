@@ -2,7 +2,7 @@ A collection of methods for working with Objects.<br>
 
 ▌
 📦 [JSR](https://jsr.io/@nodef/extra-object),
-📦 [NPM](https://www.npmjs.com/package/extra-object),
+📦 [NPM](https://www.npmjs.com/package/@nodef/extra-object),
 📰 [Docs](https://jsr.io/@nodef/extra-object/doc).
 
 An [Object] is a collection of *properties* (entries), each with a *name* (key) and
